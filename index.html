@@ -2,73 +2,132 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Olta Hasimja | Developer Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      background-color: #f7f9fc;
-      color: #333;
+    /* Reset and base */
+    *, *::before, *::after {
+      box-sizing: border-box;
     }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f0f4f8;
+      color: #222;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a {
+      color: #0077cc;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover, a:focus {
+      color: #005fa3;
+      outline: none;
+      text-decoration: underline;
+    }
+
     header {
-      background-color: #004080;
+      background: linear-gradient(135deg, #004080 0%, #0077cc 100%);
       color: white;
-      padding: 2rem 1rem;
+      padding: 3rem 1.5rem;
       text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     }
     header h1 {
+      font-weight: 700;
+      font-size: 2.8rem;
       margin: 0;
-      font-size: 2.5rem;
+      letter-spacing: 1.2px;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
     }
     header p {
-      margin: 0.5rem 0 0;
+      margin: 0.4rem 0 0;
+      font-weight: 500;
       font-size: 1.1rem;
+      opacity: 0.85;
+      font-style: italic;
     }
+
     main {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem 1rem;
+      max-width: 960px;
+      margin: 2.5rem auto 4rem;
+      padding: 0 1rem;
     }
+
     section {
-      margin-bottom: 3rem;
+      margin-bottom: 3.5rem;
     }
+
     h2 {
+      font-weight: 700;
+      font-size: 2rem;
       color: #004080;
-      border-bottom: 2px solid #004080;
-      padding-bottom: 0.3rem;
-      margin-bottom: 1rem;
+      border-bottom: 3px solid #0077cc;
+      padding-bottom: 0.25rem;
+      margin-bottom: 1.6rem;
+      letter-spacing: 0.8px;
     }
+
     .project {
       background: white;
-      border-radius: 10px;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      border-radius: 12px;
+      padding: 1.8rem 2rem;
+      margin-bottom: 1.8rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 28px rgba(0,0,0,0.12);
     }
     .project h3 {
       margin-top: 0;
+      font-weight: 600;
+      font-size: 1.5rem;
       color: #003366;
-    }
-    a {
-      color: #004080;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #777;
-      padding: 1rem;
+      letter-spacing: 0.4px;
     }
     .date {
       font-style: italic;
+      font-weight: 500;
       color: #666;
       font-size: 0.9rem;
-      margin-bottom: 0.5rem;
+      margin: 0.3rem 0 1rem;
+    }
+    .tech-stack {
+      font-weight: 600;
+      margin-bottom: 0.7rem;
+      color: #005fa3;
+    }
+    p {
+      margin-top: 0;
+      margin-bottom: 0.9rem;
+      font-size: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+      padding: 1.6rem 1rem;
+      border-top: 1px solid #ddd;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      main {
+        margin: 2rem 1rem 3rem;
+      }
     }
   </style>
 </head>
@@ -76,81 +135,80 @@
 
   <header>
     <h1>Olta Hasimja</h1>
-    <p>Full-Stack Developer | React • .NET • PHP • SQL</p>
+    <p>Full-Stack Developer &bull; React &bull; .NET &bull; PHP &bull; SQL</p>
   </header>
 
   <main>
     <section>
       <h2>About Me</h2>
       <p>
-        I’m a Computer Science and Engineering student at UBT College with strong experience in full-stack development.
-        I love turning ideas into real-world digital solutions using modern frameworks and clean design.
+        I am a passionate Computer Science and Engineering student at UBT College with hands-on experience
+        developing full-stack web applications. I enjoy creating efficient, maintainable, and user-friendly solutions
+        that make an impact.
       </p>
     </section>
 
     <section>
       <h2>Projects</h2>
 
-      <div class="project">
+      <article class="project">
         <h3>🧘 Wellness Center Management System</h3>
-        <div class="date">March 2025 – Present</div>
-        <p><strong>Tech Stack:</strong> Node.js, React, MongoDB, MySQL</p>
+        <div class="date">Jan 2024 – Apr 2024</div>
+        <div class="tech-stack">Node.js, React, MongoDB, MySQL</div>
         <p>
-          A complete hybrid app for wellness centers, including service scheduling, employee management,
-          and client tracking with real-time admin dashboards.
+          A hybrid management app for wellness centers, featuring scheduling, employee management,
+          and client tracking with real-time dashboards.
         </p>
-        <p>GitHub: <a href="https://github.com/oltahasimja/WellnessCenter" target="_blank">https://github.com/oltahasimja/WellnessCenter</a></p>
-      </div>
+        <p>GitHub: <a href="https://github.com/oltahasimja/WellnessCenter" target="_blank" rel="noopener noreferrer">WellnessCenter</a></p>
+      </article>
 
-      <div class="project">
+      <article class="project">
         <h3>🏨 Hotel Booking Platform</h3>
-        <div class="date">March 2024 – June 2024</div>
-        <p><strong>Tech Stack:</strong> .NET 8, React, SQL Server</p>
+        <div class="date">May 2024 – Jul 2024</div>
+        <div class="tech-stack">.NET 8, React, SQL Server</div>
         <p>
-          A dynamic platform for hotel reservations, allowing users to search availability, book rooms,
-          and manage bookings, with admin-level management for hotel staff.
+          A platform for hotel room search, reservations, and management with user and admin roles.
         </p>
-        <p>GitHub: <a href="https://github.com/EdisonAlushaj/Hoteli" target="_blank">https://github.com/EdisonAlushaj/Hoteli</a></p>
-      </div>
+        <p>GitHub: <a href="https://github.com/EdisonAlushaj/Hoteli" target="_blank" rel="noopener noreferrer">Hoteli</a></p>
+      </article>
 
-      <div class="project">
+      <article class="project">
         <h3>💼 Job Application Portal</h3>
-        <div class="date">Nob 2023 – Feb 2024</div>
-        <p><strong>Tech Stack:</strong> PHP, MySQL</p>
+        <div class="date">Aug 2024 – Sep 2024</div>
+        <div class="tech-stack">PHP, MySQL</div>
         <p>
-          A web-based job board system where employers can post openings and candidates can apply online.
-          Includes role-based login, approval system, and application tracking.
+          Web portal where employers post jobs and candidates apply with role-based access and application tracking.
         </p>
-        <p>GitHub: <a href="https://github.com/oltahasimja/PROJEKTI" target="_blank">https://github.com/oltahasimja/PROJEKTI</a></p>
-      </div>
+        <p>GitHub: <a href="https://github.com/oltahasimja/PROJEKTI" target="_blank" rel="noopener noreferrer">PROJEKTI</a></p>
+      </article>
 
-      <div class="project">
+      <article class="project">
         <h3>🚕 Pentasharp Transport System</h3>
-        <div class="date">Oct 2024 – Jan 2025</div>
-        <p><strong>Tech Stack:</strong> ASP.NET MVC, SQL Server</p>
+        <div class="date">Oct 2024 – Present</div>
+        <div class="tech-stack">ASP.NET MVC, SQL Server</div>
         <p>
-          Public transportation and taxi management system with booking features, trip tracking,
-          Google Maps integration, and admin-side reporting. Designed to help cities manage their transport services efficiently.
+          Public transport and taxi management system with real-time booking, trip tracking,
+          and admin reporting.
         </p>
-        <p>GitHub: <a href="https://github.com/starlabspro-internship/pentasharp" target="_blank">https://github.com/starlabspro-internship/pentasharp</a></p>
-      </div>
+        <p>GitHub: <a href="https://github.com/starlabspro-internship/pentasharp" target="_blank" rel="noopener noreferrer">pentasharp</a></p>
+      </article>
 
-      <div class="project">
+      <article class="project">
         <h3>🗄️ Database Management for Appointment Project</h3>
-        <div class="date">Sept 2023 – Feb 2024</div>
-        <p><strong>Tech Stack:</strong> MySQL</p>
+        <div class="date">Nov 2023 – Dec 2023</div>
+        <div class="tech-stack">MySQL</div>
         <p>
-          Designed and managed the database schema for an appointment booking system,
-          optimizing queries and ensuring data integrity for smooth scheduling.
+          Designed and optimized the database schema for an appointment booking system to ensure
+          data integrity and performance.
         </p>
-      </div>
+      </article>
 
     </section>
 
     <section>
       <h2>Contact</h2>
       <p>Email: <a href="mailto:oh67751@ubt-uni.net">oh67751@ubt-uni.net</a></p>
-      <p>GitHub: <a href="https://github.com/oltahasimja" target="_blank">github.com/oltahasimja</a></p>
+      <p>GitHub: <a href="https://github.com/oltahasimja" target="_blank" rel="noopener noreferrer">github.com/oltahasimja</a></p>
     </section>
   </main>
 
